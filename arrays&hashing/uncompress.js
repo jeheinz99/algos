@@ -34,7 +34,7 @@ uncompress("127y"); // ->'yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 */
 
 // function uncompress that accepts 1 string and returns the 'uncompressed version' of the string
-const uncompress = s => {
+const uncompress2 = s => {
   const numbers = '1234567890';
   let i = 0;
   let j = 0;
@@ -43,7 +43,7 @@ const uncompress = s => {
 
     if (numbers.includes(s[j])) {
       j++;
-    } 
+    }
     else {
       const num = Number(s.slice(i, j));
       string.push(s[j].repeat(num));
@@ -53,10 +53,15 @@ const uncompress = s => {
 
   };
   return string.join('');
-}
+};
+
+const uncompress = s => {
+
+};
 
 
 let str = "3n12e2z";
 for (let i = 0; i < str.length; i++) {
-  console.log(Number(str[i]));
+  let num = Number(str[i]);
+  console.log(isNaN(num));
 }
