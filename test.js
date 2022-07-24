@@ -10,8 +10,6 @@ const minimalOperations = words => {
       console.log(words[i][p1], 'p1');
       console.log(words[i][p2], 'p2');
       while (words[i][p1] === words[i][p2] && p2 < words[i].length) {
-        // console.log(words[i][p1], 'words-p1');
-        // console.log(words[i][p2], 'words-p2');
         p2++;
       }
       if ((p2 - p1) > 1) {
